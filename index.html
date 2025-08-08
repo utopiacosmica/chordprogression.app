@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Download Chord App for iOS and macOS</title>
+    <meta name="description" content="Create beautiful chord progressions with full flexibility - use inversions, sus2, sus4, 7th, 9th, and more." />
+
+    <!-- Font -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap">
+    </noscript>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Chord" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/styles.v1.css">
+
+</head>
+
+<body>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <!-- Left block -->
+        <div class="top-nav-left-block">
+            <a href="/tools/" class="top-nav-btn">Tools</a>
+        </div>
+
+        <!-- Right block -->
+        <div class="top-nav-right-block">
+            <a href="/" class="top-nav-btn">Download App</a>
+        </div>
+    </nav>
+
+
+    <!-- Download text -->
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 40px; padding: 5px;">
+
+        <h1 class="huge">Chord App</h1>
+
+        <h2>Create beautiful chord progressions with full flexibility!</h2>
+
+        <div id="button-container">
+            <a href="#" onclick="showNewButtons(event)" style="margin-top: 15px;" class="link-button">
+                Download
+            </a>
+        </div>
+
+    </div>
+
+
+    <!-- Images -->
+    <div class="image-gallery">
+        <img src="images/ios-app-screenshot-1.v1.png" alt="App screenshot 1">
+
+        <picture>
+            <source media="(min-width: 630px)" srcset="images/ios-app-screenshot-2.v1.png">
+            <img alt="App screenshot 1">
+        </picture>
+
+        <picture>
+            <source media="(min-width: 630px)" srcset="images/ios-app-screenshot-3.v1.png">
+            <img alt="App screenshot 1">
+        </picture>
+    </div>
+
+
+    <script>
+        // Download button to 3 links
+        function showNewButtons(event) {
+            event.preventDefault();
+            const container = document.getElementById('button-container');
+            container.innerHTML = `
+      <a href="/ios/" style="margin-top: 15px;" class="link-button">App Store (iOS)</a>
+      <a href="/macos/" style="margin-top: 15px;" class="link-button">App Store (macOS)</a>
+    `;
+        }
+    </script>
+
+</body>
+
+</html>

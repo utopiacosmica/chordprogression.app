@@ -1,0 +1,208 @@
+/* === Colors === */
+
+:root {
+    --color-bg: #FAECF6;
+    --color-text: #1D1D1F;
+}
+
+/* === Styles === */
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color-bg);
+    padding-top: 50px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1.huge {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 200;
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: var(--color-text);
+}
+
+
+/* Top Navigation bar */
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: var(--color-text);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.top-nav-left-block {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 20px;
+    margin-left: 20px;
+}
+
+.top-nav-right-block {
+    display: flex;
+    margin-right: 20px;
+}
+
+.top-nav-btn {
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Links */
+.link-button {
+    font-size: 20px;
+    font-weight: 300;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-text);
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Tools UI */
+.tool-button {
+    all: unset;
+    background-color: white;
+    color: var(--color-text);
+    padding: 10px 10px;
+    cursor: pointer;
+    font-weight: 500;
+    width: 120px;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+.tool-button:hover {
+    background-color: #f0f0f0;
+}
+
+.tool-text-box {
+    all: unset;
+    background-color: white;
+    color: var(--color-text);
+    padding: 10px 10px;
+    cursor: default;
+    font-weight: 600;
+    width: 120px;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+.tool-text-field {
+    all: unset;
+    background-color: white;
+    color: var(--color-text);
+    padding: 10px 10px;
+    font-weight: 500;
+    width: 120px;
+    transition: background-color 0.2s;
+    text-align: center;
+    cursor: text;
+}
+
+.tool-text-field:focus {
+    box-shadow: 0 0 0 2px var(--color-text);
+}
+
+
+/* Notifications */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-text);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 0px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+
+/* Sliders */
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 2px;
+    background: white;
+    border-radius: 1px;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: white;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+.slider::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: white;
+    cursor: pointer;
+    border-radius: 0px;
+    border-color: white;
+}
+
+
+/* Images */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+    padding: 5px;
+}
+
+.image-gallery img {
+    width: 300px;
+    height: auto;
+}
+
+@media (max-width: 630px) {
+    .image-gallery picture {
+        display: none;
+    }
+}
